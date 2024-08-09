@@ -28,7 +28,7 @@ const AdminHome = () => {
         item.email.toString().toLowerCase().includes(search.toLowerCase())
     );
   return (
-    <div className='font-workSans p-3'>
+    <div className='font-workSans py-3 px-1'>
       <div className='flex w-full gap-2.5 flex-row flex-wrap '>
 
          <div className='bg-white h-[123px] rounded-[9px] w-fit pr-20 flex flex-col  justify-center  '>

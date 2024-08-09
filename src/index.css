@@ -47,3 +47,27 @@
     url("./fonts/euclid-circular-a/Euclid Circular A Semibold.ttf")
       format("truetype");
 }
+
+.inputField{
+  outline: none;
+  /* border-color: #ececec; */
+  transition-property: all;
+  transition-duration: 500ms;
+  font-weight: normal;
+  color: #25304C;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-radius: 10px;
+}
+
+.inputField:focus{
+  outline: none; /* Remove outline on focus */
+  box-shadow: 0 0 0 1px #25304C; /* Focus ring */
+  background-color: white;
+}
+
+.inputField::placeholder{
+  color: #25304C;
+  font-size: 13px;
+  font-weight: normal;
+}

@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import AdminHome from './AdminHome'
 import AdminProducts from './ProductsPage/AdminProducts'
+import Slider from './Slider'
 
 const MainPage = () => {
     const [active, setActive] = useState("Home")
   return (
-    <div className='w-full h-full flex justify-center xl:justify-start gap-x-3 bg-[#F9F9F9] font-workSans '>
-       <div className='sideBar xl:w-[20%] w-[90%] md:w-[80%] xl:flex flex-col hidden py-6 items-center bg-white h-screen '>
+    <div className='w-full relative h-full flex justify-center xl:justify-start gap-x-3 bg-[#F9F9F9] font-workSans '>
+       <div className='sideBar fixed z-50 xl:w-[20%] w-[90%] md:w-[80%] xl:flex flex-col hidden py-6 items-center bg-white h-screen '>
           <img src="/assets/KUKAlogo.svg"/>
 
           <div className='w-full flex flex-col items-center gap-y-4 mt-44 '>
@@ -25,10 +26,10 @@ const MainPage = () => {
           </div>
        </div>
 
-       <div className='mainContent xl:w-[80%] w-full bg-[#F9F9F9]'>
+       <div className='mainContent xl:ml-[21%] xl:w-[80%] w-full bg-[#F9F9F9]'>
         {active === "Home" && <AdminHome/>}
         {active === "Products" && <AdminProducts/>}
-
+        {active === "Slider" && <Slider/>}
        </div>
       
     </div>

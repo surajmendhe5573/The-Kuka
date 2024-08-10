@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import AddProducts from './AddProducts'
+import HomeScreenProducts from './HomeScreenProducts'
+import ProductPageCategories from './ProductPageCategories'
 
 const AdminProducts = () => {
     const [toggle, setToggle] = useState("Add Product")
@@ -28,6 +30,8 @@ const AdminProducts = () => {
        </div>
 
        {toggle === "Add Product" && <AddProducts/>}
+       {toggle === "Home Screen Products" && <HomeScreenProducts/>}
+       {toggle === "Product Page Categories" && <ProductPageCategories/>}
     </div>
   )
 }

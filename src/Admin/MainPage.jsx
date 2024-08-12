@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import AdminHome from "./AdminHome";
 import AdminProducts from "./ProductsPage/AdminProducts";
 import Slider from "./Slider";
+import Customers from "./Customers";
 
 const MainPage = () => {
   const [active, setActive] = useState("Home");
@@ -58,6 +59,7 @@ const MainPage = () => {
         {active === "Home" && <AdminHome />}
         {active === "Products" && <AdminProducts />}
         {active === "Slider" && <Slider />}
+        {active === "Customers" && <Customers/>}
       </div>
     </div>
   );

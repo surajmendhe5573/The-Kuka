@@ -13,7 +13,7 @@ const Navbar = () => {
            <img src='/assets/KUKAlogo.svg'/>
          </div>
 
-         <div className='links flex gap-x-10 items-center'>
+         <div className='links flex gap-x-14 items-center'>
            <Link to="/" className='text-[18px] font-poppins font-medium text-[#5F5F5F] ' >Home</Link>
            <Link to="/products" className='text-[18px] font-poppins font-medium text-[#5F5F5F] ' >Products</Link>
            <Link to="/customise" className='text-[18px] font-poppins font-medium text-[#5F5F5F] ' >Customise</Link>

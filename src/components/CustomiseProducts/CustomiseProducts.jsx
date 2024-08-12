@@ -44,15 +44,15 @@ const CustomiseProducts = () => {
            </div>
 
            <div className='lg:w-[50%] md:w-[80%] w-full flex justify-center  '>
-              <form className='xl:w-[80%] w-[90%] h-[632px] rounded-[10px]  bg-[rgba(234,237,243,1)] px-5 md:px-7 lg:px-10'>
-                 <p className='text-[#101010] font-workSans font-semibold text-[26px] mb-8 mt-10'>Customise Product?</p>
+              <form className='xl:w-[80%] w-[90%] h-fit rounded-[10px]  bg-[rgba(234,237,243,1)] px-5 md:px-7 lg:px-10'>
+                 <p className='text-[#101010] font-workSans font-semibold text-[26px] mb-8 pt-10'>Customise Product?</p>
                 
                 <div className='w-full flex flex-col gap-y-5'>
                 <input name='name' id='name' type='text' required placeholder='Enter Your Name' className='w-full h-[45px] bg-white placeholder:text-[13px] placeholder:font-normal placeholder:font-workSans rounded-[10px] px-6 placeholder:text-[#535353] '/>
                 <input name='email' id='email' type='email' required placeholder='Enter Your Email' className='w-full h-[45px] bg-white placeholder:text-[13px] placeholder:font-normal placeholder:font-workSans rounded-[10px] px-6 placeholder:text-[#535353] '/>
                 <input name='phone' id='phone' type='number' required placeholder='Enter Your Mobile Number' className='w-full h-[45px] bg-white placeholder:text-[13px] placeholder:font-normal placeholder:font-workSans rounded-[10px] px-6 placeholder:text-[#535353] '/>
                 <textarea name='message' id='message' type='text' required placeholder='Message' className='w-full h-[212px] bg-white placeholder:text-[13px] placeholder:font-normal placeholder:font-workSans rounded-[10px] px-6 pt-6 placeholder:text-[#535353] '/>
-                <button type='submit' className='w-full h-[47px] bg-black text-white rounded-full text-[18px] font-semibold font-poppins mt-5 '>Send</button>
+                <button type='submit' className='w-full h-[47px] mb-7 bg-black text-white rounded-full text-[18px] font-semibold font-poppins mt-5 '>Send</button>
                
                 </div>
                 

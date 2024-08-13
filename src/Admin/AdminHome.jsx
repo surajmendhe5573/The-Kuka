@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { MoveDown, MoveRight } from 'lucide-react'
+import { MoveDown, MoveRight, MoveUp } from 'lucide-react'
 
 const AdminHome = () => {
 
@@ -32,7 +32,7 @@ const AdminHome = () => {
       <div className='flex w-full gap-2.5 flex-row flex-wrap '>
 
          <div className='bg-white h-[123px] rounded-[9px] w-fit pr-20 flex flex-col  justify-center  '>
-            <p className='font-semibold md:text-[18px] text-[16px] text-black ml-3.5 mt-2 '>Current Viewers</p>
+            <p className='font-semibold md:text-[18px] text-[16px] text-[#6779A5] ml-3.5 mt-2 '>Current Viewers</p>
             <div className='flex  ml-3.5 gap-x-3 mt-3'>
               <img src="/assets/Eye.svg"/>
               <p className='md:text-[48px] text-[32px] font-semibold text-[#00B612]  '>354</p>
@@ -40,39 +40,52 @@ const AdminHome = () => {
          </div>
 
          <div className='bg-white h-[123px] rounded-[9px] w-fit pr-20 flex flex-col  justify-center  '>
-            <p className='font-semibold md:text-[18px] text-[16px] text-black  ml-3.5 mt-2 '>Total Customers</p>
-            <div className='flex  ml-3.5 gap-x-3 mt-3'>
-              <p className='md:text-[48px] text-[32px] font-semibold text-[#00B612]  '>354565</p>
+            <p className='font-semibold md:text-[16px] text-[14px] text-[#6779A5]  ml-3.5 mt-2 '>Total Customers</p>
+            <div className='flex flex-col ml-3.5  '>
+              <p className='md:text-[40px] text-[30px] font-semibold text-[#00B612]  '>354565</p>
+              <div className='flex gap-x-2 items-end'>
+                <div className='w-fit flex h-[21px] bg-[#00b6123a] px-1.5 gap-x-1 justify-center items-center rounded-[5px] '>
+                  <MoveUp color="#00B612" size="10"/>
+                  <p className='font-semibold text-[14px] font-workSans text-[#00B612] '>10%</p>
+                </div>
+                <p className='text-[#aaaaaa] font-medium text-[14px] font-workSans '>in Last Month</p>
+              </div>
             </div>
          </div>
 
          <div className='bg-white h-[123px] rounded-[9px] w-fit pr-20 flex flex-col  justify-center  '>
-            <p className='font-semibold md:text-[18px] text-[16px] text-black ml-3.5 mt-2 '>Repeat Customers</p>
-            <div className='flex  ml-3.5 gap-x-3 mt-3 items-center'>
-              <p className='md:text-[48px] text-[32px] font-semibold text-[#FF4242]  '>3545</p>
-              <div className='flex '>
-              <MoveDown color="#FF4242" /> 
-              <p className='text-[#ff4242] md:text-[18px] text-[16px] font-semibold '>10%</p>
+            <p className='font-semibold md:text-[16px] text-[14px] text-[#6779A5]  ml-3.5 mt-2 '>Repeat Customers</p>
+            <div className='flex flex-col ml-3.5 '>
+              <p className='md:text-[40px] text-[30px] font-semibold text-[#FF4242]  '>354565</p>
+              <div className='flex gap-x-2 items-end '>
+                <div className='w-fit flex h-[21px] bg-[#ff42424f] px-1.5 gap-x-1 justify-center items-center rounded-[5px] '>
+                  <MoveDown color="#FF4242" size="10"/>
+                  <p className='font-semibold text-[14px] font-workSans text-[#FF4242] '>10%</p>
+                </div>
+                <p className='text-[#aaaaaa] font-medium text-[14px] font-workSans '>in Last Month</p>
               </div>
             </div>
          </div>
 
-         <div className='bg-white h-[123px] rounded-[9px] w-fit gap-x-3 flex items-center  '>
-            <div>
-            <p className='font-semibold md:text-[18px] text-[16px] text-black ml-3.5 mt-2 '>Total Orders</p>
-            <div className='flex  ml-3.5 gap-x-3 mt-3 items-center'>
-              <p className='md:text-[48px] text-[32px] font-semibold text-[#FF4242]  '>3545</p>
-              <div className='flex '>
-              <MoveDown color="#FF4242" /> 
-              <p className='text-[#ff4242] md:text-[18px] text-[16px] font-semibold '>10%</p>
+         <div className='bg-white h-[123px] rounded-[9px] w-fit gap-x-12 flex md:pr-20 pr-14 '>
+         <div className='mt-3 '>
+            <p className='font-semibold md:text-[16px] text-[14px] text-[#6779A5]  ml-3.5 '>Total Orders</p>
+            <div className='flex flex-col ml-3.5 '>
+              <p className='md:text-[40px] text-[30px] font-semibold text-[#FF4242]  '>354565</p>
+              <div className='flex gap-x-2 items-end '>
+                <div className='w-fit flex h-[21px] bg-[#ff42424f] px-1.5 gap-x-1 justify-center items-center rounded-[5px] '>
+                  <MoveDown color="#FF4242" size="10"/>
+                  <p className='font-semibold text-[14px] font-workSans text-[#FF4242] '>10%</p>
+                </div>
+                <p className='text-[#aaaaaa] font-medium text-[14px] font-workSans '>in Last Month</p>
               </div>
             </div>
-            </div>
+         </div>
 
-            <div>
-            <p className='font-semibold md:text-[18px] text-[16px] text-[#6779A5] mx-3.5 mt-2 '>Last Month</p>
-            <div className='flex  mx-3.5 gap-x-3 mt-3 items-center'>
-              <p className='md:text-[48px] text-[32px] font-semibold text-[#00B612]  '>3899</p>
+            <div className='mt-3'>
+            <p className='font-semibold md:text-[16px] text-[14px] text-[#6779A5] mx-3.5 '>Last Month</p>
+            <div className='flex  mx-3.5 gap-x-3  items-center'>
+              <p className='md:text-[40px] text-[30px] font-semibold text-[#00B612]  '>3899</p>
             </div>
             </div>
             
@@ -80,7 +93,8 @@ const AdminHome = () => {
 
       </div>
 
-      <div className='w-full bg-white h-fit rounded-[9px] mt-2 p-3.5'>
+      <div className='xl:flex-row flex-col flex w-full  gap-4 '>
+       <div className='xl:w-[50%] w-full bg-white h-fit md:h-[183px] rounded-[9px] mt-2 p-5'>
         <div className='w-full flex md:flex-row flex-col md:justify-between gap-y-4  '>
            <p className='text-[#25304C] font-semibold text-[24px] '>Total Sales</p>
            <div className='flex flex-row gap-4 items-center  '>
@@ -98,17 +112,17 @@ const AdminHome = () => {
            </div>
         </div>
 
-        <div className='flex xl:flex-row flex-col gap-y-4 xl:justify-between mt-5'>
-            <div className='flex flex-row flex-wrap gap-x-20 gap-y-4 '>
+        <div className='flex xl:flex-row flex-col gap-y-4 mt-5'>
+            <div className='flex flex-row flex-wrap gap-x-10 md:gap-x-20 xl:gap-x-0 w-full  xl:justify-between  gap-y-4 '>
                <div>
                  <p className='text-[#6779A5] font-semibold text-[18px] '>Total Sales</p>
                  <p className='text-[#00B612] font-semibold text-[34px] mt-1.5 '>₹ 3,29,994</p>
                </div>
 
-               <div>
+               {/* <div>
                  <p className='text-[#6779A5] font-semibold text-[18px] '>Total Orders</p>
                  <p className='text-[#00B612] font-semibold text-[34px] mt-1.5 '>7689</p>
-               </div>
+               </div> */}
 
                <div>
                  <p className='text-[#6779A5] font-semibold text-[18px] '>Average Order Value</p>
@@ -117,13 +131,28 @@ const AdminHome = () => {
             
             </div>
 
-             <div className='cursor-pointer flex gap-x-2 xl:mt-14 '>
+             {/* <div className='cursor-pointer flex gap-x-2 xl:mt-14 '>
                <p className='text-[#25304C] font-semibold text-[18px] font-euclid '>View in Detail </p>
                <MoveRight color="#25304C" />
-             </div>
+             </div> */}
 
         </div>
+       </div>
+
+       <div className='xl:w-[50%] w-full bg-white h-fit md:h-[183px] rounded-[9px] mt-2 p-5'>
+      
+        <p className='font-semibold text-[16px] font-workSans text-[#25304C] '>Sales Locations</p>
+        <div className='w-[278px] h-[137px]  flex justify-center mx-auto '>
+        <img src="/assets/Earth.svg" className='w-full h-full object-contain   '/>
+        </div>
+        
+        
+
+       </div>
+
       </div>
+
+      
 
       <div className='w-full bg-white rounded-[9px] mt-2 p-3.5 '>
 

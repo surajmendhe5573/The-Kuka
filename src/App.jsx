@@ -10,6 +10,10 @@ import Cart from "./components/Cart/Cart";
 import MainPage from "./Admin/MainPage";
 import AdminOutlet from "./outlet/AdminOutlet";
 import MainOutlet from "./outlet/MainOutlet";
+import AdminHome from "./Admin/AdminHome";
+import AdminProducts from "./Admin/ProductsPage/AdminProducts";
+import Slider from "./Admin/Slider";
+import Customers from "./Admin/Customers";
 
 function App() {
   return (
@@ -25,6 +29,10 @@ function App() {
           </Route>
           <Route path="/admin" element={<AdminOutlet />}>
             <Route path="/admin" element={<MainPage />} />
+            <Route path="/admin/home" element={<AdminHome/>}/>
+            <Route path="/admin/products" element={<AdminProducts/>}/>
+            <Route path="/admin/slider" element={<Slider/>}/>
+            <Route path="/admin/customers" element={<Customers/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
-import { MoveDown, MoveRight, MoveUp } from 'lucide-react'
+import { ChevronLeft, MoveDown, MoveRight, MoveUp } from 'lucide-react'
+import { Link } from 'react-router-dom';
 
 const AdminHome = () => {
 
@@ -28,7 +29,11 @@ const AdminHome = () => {
         item.email.toString().toLowerCase().includes(search.toLowerCase())
     );
   return (
-    <div className='font-workSans py-3 px-1'>
+    <div className='font-workSans py-3 px-1 bg-[#F9F9F9] xl:bg-none '>
+      <Link to="/admin" className='flex xl:hidden items-center gap-x-1 my-2 mb-4 '>
+          <ChevronLeft color="#25304c" />
+          <p className='text-[#25304C] text-[16px] font-medium font-workSans '>Back</p>
+      </Link>
       <div className='flex w-full gap-2.5 flex-row flex-wrap '>
 
          <div className='bg-white h-[123px] rounded-[9px] w-fit pr-20 flex flex-col  justify-center  '>

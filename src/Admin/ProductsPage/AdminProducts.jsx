@@ -4,11 +4,17 @@ import AllProduct from "./AllProduct";
 import HomeScreenProducts from "./HomeScreenProducts";
 import ProductPageCategories from "./ProductPageCategories";
 import RemoveProduct from "./RemoveProduct";
+import { Link } from "react-router-dom";
+import { ChevronLeft } from "lucide-react";
 
 const AdminProducts = () => {
   const [toggle, setToggle] = useState("Add Product");
   return (
     <div className="font-workSans w-full  bg-white p-5 rounded-[6px] ">
+       <Link to="/admin" className='flex xl:hidden items-center gap-x-1 my-2 mb-4 '>
+          <ChevronLeft color="#25304c" />
+          <p className='text-[#25304C] text-[16px] font-medium font-workSans '>Back</p>
+      </Link>
       <div className="xl:max-w-full max-w-[350px] md:max-w-[650px] mb-10  overflow-x-scroll md:overflow-auto rounded-[22px] bg-[#F1F1F1] h-[45px] flex justify-between">
         <div
           onClick={() => setToggle("Add Product")}

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { ChevronLeft } from "lucide-react";
 
 const Slider = () => {
   const [formData, setFormData] = useState({
@@ -33,6 +35,10 @@ const Slider = () => {
 
   return (
     <div className="bg-white w-full rounded-[10px]   my-2 font-workSans  p-6 ">
+       <Link to="/admin" className='flex xl:hidden items-center gap-x-1 my-2 mb-4 '>
+          <ChevronLeft color="#25304c" />
+          <p className='text-[#25304C] text-[16px] font-medium font-workSans '>Back</p>
+      </Link>
       <p className="text-[#25304C] font-semibold text-[24px] ">Slider Images</p>
 
       <div className="flex w-full xl:flex-row flex-col mt-14 gap-10  ">

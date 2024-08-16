@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom';
+import { ChevronLeft } from 'lucide-react';
 
 const Customers = () => {
     const data = [
@@ -37,6 +39,10 @@ const Customers = () => {
     );
   return (
     <div className='w-full bg-white rounded-[9px] mt-2 p-3.5 '>
+         <Link to="/admin" className='flex xl:hidden items-center gap-x-1 my-2 mb-4'>
+          <ChevronLeft color="#25304c" />
+          <p className='text-[#25304C] text-[16px] font-medium font-workSans '>Back</p>
+      </Link>
 
     <div className='w-full flex xl:flex-row xl:flex-wrap flex-col gap-y-5  xl:justify-between xl:items-center '>
        <p className='text-[#25304C] font-semibold text-[18px] '>Customisation Inquiries</p>

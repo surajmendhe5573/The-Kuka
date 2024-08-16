@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Ellipsis, X } from 'lucide-react'
+import Login from '../Login/Login'
 
 const Navbar = () => {
     const [openNav, setOpenNav] = useState(false)
+    const [openLogin, setOpenLogin] = useState(false)
   return (
-    <div>
+    <div className=' '>
       {/* Desktop nav */}
       <nav className='w-full h-[100px] bg-white lg:flex hidden justify-between items-center px-20'>
 
@@ -21,12 +23,16 @@ const Navbar = () => {
          </div>
 
          <div className='profile flex gap-x-5 items-center'>
-           <Link to="/account"><img src="/assets/account.svg"/></Link>
+           <div onClick={()=>setOpenLogin(true)} className='cursor-pointer '><img src="/assets/account.svg"/></div>
            <Link to="/cart"><img src="/assets/cart.svg"/></Link>
          </div>
 
       </nav>
       {/* Desktop nav end*/}
+
+      {openLogin && <div className='xl:flex hidden '>
+        <Login setOpenLogin={setOpenLogin} openLogin={openLogin} />
+      </div>}
 
        {/* Mobile nav */}
         <nav className='relative w-full h-fit  bg-white  lg:hidden  '>
@@ -49,14 +55,16 @@ const Navbar = () => {
            <Link to="/products" className='text-[18px] font-poppins font-medium text-[#5F5F5F] ' >Products</Link>
            <Link to="/customise" className='text-[18px] font-poppins font-medium text-[#5F5F5F] ' >Customise</Link>
            <Link to="/aboutus" className='text-[18px] font-poppins font-medium text-[#5F5F5F] ' >About Us</Link>
-           <Link to="/account"><img src="/assets/account.svg"/></Link>
+           <div onClick={()=>setOpenLogin(true)}><img src="/assets/account.svg"/></div>
            <Link to="/cart"><img src="/assets/cart.svg"/></Link>
           </div>}
 
         </nav>
       
        {/* Mobile nav end*/}
-
+       {openLogin && <div className='flex xl:hidden '>
+        <Login setOpenLogin={setOpenLogin} openLogin={openLogin}/>
+      </div>}
       
 
     </div>

@@ -14,6 +14,7 @@ import AdminHome from "./Admin/AdminHome";
 import AdminProducts from "./Admin/ProductsPage/AdminProducts";
 import Slider from "./Admin/Slider";
 import Customers from "./Admin/Customers";
+import Reviews from "./Admin/Reviews";
 
 function App() {
   return (
@@ -33,6 +34,8 @@ function App() {
             <Route path="/admin/products" element={<AdminProducts/>}/>
             <Route path="/admin/slider" element={<Slider/>}/>
             <Route path="/admin/customers" element={<Customers/>}/>
+            <Route path="/admin/reviews" element={<Reviews/>}/>
+
           </Route>
         </Routes>
       </BrowserRouter>

@@ -4,6 +4,7 @@ import AdminProducts from "./ProductsPage/AdminProducts";
 import Slider from "./Slider";
 import Customers from "./Customers";
 import MobileMainPage from "./MobileMainPage";
+import Reviews from "./Reviews";
 
 const MainPage = () => {
   const [active, setActive] = useState("Home");
@@ -72,6 +73,7 @@ const MainPage = () => {
         {active === "Products" && <AdminProducts />}
         {active === "Slider" && <Slider />}
         {active === "Customers" && <Customers/>}
+        {active === "Reviews" && <Reviews/>}
       </div>
     </div>
 

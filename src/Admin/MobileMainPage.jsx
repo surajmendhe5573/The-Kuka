@@ -53,7 +53,7 @@ const MobileMainPage = () => {
           >
             <p className="pl-10 ">Customers</p>
           </Link>
-          <div
+          <Link to="/admin/reviews"
             onClick={() => setActive("Reviews")}
             className={`w-[96%] ${
               active === "Reviews"
@@ -62,7 +62,7 @@ const MobileMainPage = () => {
             }  cursor-pointer h-[50px] flex items-center  rounded-[4px] border-l-[6px]   text-[18px]`}
           >
             <p className="pl-10 ">Reviews</p>
-          </div>
+          </Link>
         </div>
       </div>
 

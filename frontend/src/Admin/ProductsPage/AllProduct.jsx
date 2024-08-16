@@ -1,37 +1,27 @@
 import { ChevronDown, Search } from "lucide-react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
+const VITE_APP_SERVER = import.meta.env.VITE_APP_SERVER;
 
 const AllProduct = () => {
-  const [products, setProducts] = useState([
-    {
-      title: "Wooden Spices Box",
-      description: "This is product 1",
-      image: "/assets/spiceBox.png",
-      price: "1199",
-      display_on_home: true,
-      category: "Spices",
-    },
-    {
-      title: "Product 2",
-      description: "This is product 2",
-      image: "/assets/spiceBox.png",
-      price: "1199",
-      display_on_home: false,
-      category: "Spices",
-    },
-    {
-      title: "Product 3",
-      description: "This is product 3",
-      image: "/assets/spiceBox.png",
-      price: "1199",
-      display_on_home: true,
-      category: "Dry Fruit",
-    },
-  ]);
-
+  const [products, setProducts] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    // Fetch data from API
+    axios
+      .get(`${VITE_APP_SERVER}/api/product`) // Replace with your API endpoint
+      .then((response) => {
+        // Assuming the response data is in response.data
+        setProducts(response.data);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the products!", error);
+      });
+  }, []);
 
   // Filter products based on selected category and search value
   const filteredProducts = products.filter((product) => {
@@ -69,7 +59,7 @@ const AllProduct = () => {
           >
             <ul>
               {products
-                .map((product, index) => product.category)
+                .map((product) => product.category)
                 .filter(
                   (category, index, self) => self.indexOf(category) === index
                 ) // Remove duplicates
@@ -114,22 +104,24 @@ const AllProduct = () => {
             <div className="w-52 h-52 rounded-md">
               <img
                 className="w-full h-full object-cover rounded-md"
-                src={product.image}
+                src={product.images[0]}
                 alt={product.title}
               />
             </div>
             <div className="flex flex-col items-start justify-between h-full">
               <div className="flex flex-col items-start justify-between h-full gap-y-5">
                 <h2 className="text-[22px] font-normal text-[#101010] font-bangla">
-                  {product.title}
+                  {product.productName}
                 </h2>
                 <p className="text-[#6779A5] font-poppins text-sm">
-                  {product.description}
+                  {product.smallDescription}
                 </p>
                 <div className="flex items-center gap-x-5">
                   <p className="text-[#25304C] font-bangla text-2xl">
                     Price:{" "}
-                    <span className="text-[#CE916B]">{product.price}</span>
+                    <span className="text-[#CE916B] font-bangla">
+                      ₹{product.productPrice}
+                    </span>
                   </p>
                   <div className="flex items-center gap-x-2 cursor-pointer">
                     <input

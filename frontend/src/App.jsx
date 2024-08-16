@@ -30,12 +30,11 @@ function App() {
           </Route>
           <Route path="/admin" element={<AdminOutlet />}>
             <Route path="/admin" element={<MainPage />} />
-            <Route path="/admin/home" element={<AdminHome/>}/>
-            <Route path="/admin/products" element={<AdminProducts/>}/>
-            <Route path="/admin/slider" element={<Slider/>}/>
-            <Route path="/admin/customers" element={<Customers/>}/>
-            <Route path="/admin/reviews" element={<Reviews/>}/>
-
+            <Route path="/admin/home" element={<AdminHome />} />
+            <Route path="/admin/products" element={<AdminProducts />} />
+            <Route path="/admin/slider" element={<Slider />} />
+            <Route path="/admin/customers" element={<Customers />} />
+            <Route path="/admin/reviews" element={<Reviews />} />
           </Route>
         </Routes>
       </BrowserRouter>

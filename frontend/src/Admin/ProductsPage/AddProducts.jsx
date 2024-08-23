@@ -288,12 +288,32 @@ const AddProducts = () => {
           </div>
         </div>
 
+        <div className='flex w-full md:flex-row gap-4 flex-col items-center'>
+                <div className='md:w-[32.5%] w-[90%] flex flex-col gap-y-2'>
+                    <label className='font-semibold text-[#25304C] text-[14px] '>Product Price</label>
+                    <input type='number' name='price' onChange={handleChange} value={formData.price} placeholder='Enter Product Price' className='inputField w-full h-[45px]  bg-[#EAEDF3] px-6 ' />
+                </div>
+
+                <div onClick={()=>setOpenVariant(true)} className='w-[90%] cursor-pointer md:w-[216px] h-[45px] flex justify-center items-center rounded-[10px] bg-[#25304C] md:mt-7 md:ml-2 text-white text-[16px] font-semibold '>Create Variant</div>
+                <button className='w-[90%] md:w-[216px] h-[45px] rounded-[10px] bg-[#25304C] md:mt-7 md:-ml-1.5 text-white text-[16px] font-semibold '>Show Variant</button>
+            </div>
+
+    <div className="w-full flex md:gap-x-5 gap-x-2 justify-end ">
+    <button
+          className="md:w-[216px] w-full h-[45px] rounded-[10px] border border-[#25304C] text-[#25304c] text-[16px] font-semibold mt-6"
+        >
+         Cancel
+        </button>
+
         <button
           type="submit"
-          className="w-[100%] h-[50px] rounded-[10px] bg-[#25304C] text-white text-[20px] font-semibold mt-6"
+          className="md:w-[216px] w-full h-[45px] rounded-[10px] bg-[#25304C] text-white text-[16px] font-semibold mt-6"
         >
           Add Product
         </button>
+    </div>
+
+
       </form>
     </div>
   );

@@ -5,6 +5,7 @@ import Hero from '../Hero/Hero';
 import Testimonial from '../Testimonial/Testimonial';
 import CustomiseProducts from '../CustomiseProducts/CustomiseProducts';
 import productsList from '../productList/productsList.json'
+import ReviewForm from '../ReviewForm/ReviewForm';
 
 const ProductPage = ({ products }) => {
     // const productsList = [
@@ -145,6 +146,7 @@ const ProductPage = ({ products }) => {
        <ProductsList products={filteredProducts} filterState={filterState} />
     </div>
     <Testimonial/>
+    <ReviewForm/>
     <CustomiseProducts/>
     </>
    

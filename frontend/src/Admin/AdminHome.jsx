@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { ChevronLeft, MoveDown, MoveRight, MoveUp } from 'lucide-react'
 import { Link } from 'react-router-dom';
+import WorldMap from './WorldMap/WorldMap';
 
 const AdminHome = () => {
 
@@ -148,7 +149,8 @@ const AdminHome = () => {
       
         <p className='font-semibold text-[16px] font-workSans text-[#25304C] '>Sales Locations</p>
         <div className='w-[278px] h-[137px]  flex justify-center mx-auto '>
-        <img src="/assets/Earth.svg" className='w-full h-full object-contain   '/>
+        {/* <img src="/assets/Earth.svg" className='w-full h-full object-contain   '/> */}
+        <WorldMap/>
         </div>
         
         
